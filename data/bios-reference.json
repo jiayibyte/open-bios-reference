@@ -1,0 +1,2091 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataset": "biosarchives-open-reference",
+  "source": "https://biosarchives.com/",
+  "license": "MIT (Technical metadata & public specifications only; zero proprietary firmware files)",
+  "generatedForRelease": "2026-11-25",
+  "counts": {
+    "brands": 8,
+    "flagshipModels": 11,
+    "beepAndLedSystems": 8,
+    "beepAndLedPatterns": 47,
+    "postHexCodes": 48,
+    "spiFlashChips": 29
+  },
+  "brands": [
+    {
+      "slug": "hp",
+      "name": "HP",
+      "biosKeys": [
+        "F10",
+        "ESC"
+      ],
+      "bootMenuKeys": [
+        "F9"
+      ],
+      "recoveryKeys": [
+        "Win + B",
+        "Win + V"
+      ],
+      "flashUtility": "HP BIOS Update Utility / HP PC Hardware Diagnostics UEFI",
+      "flashbackRenameRule": "Win + B recovery reads /Hewlett-Packard/BIOS/Current/*.bin created by HP SoftPaq",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp/"
+    },
+    {
+      "slug": "dell",
+      "name": "Dell",
+      "biosKeys": [
+        "F2"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Ctrl + Esc"
+      ],
+      "flashUtility": "Dell BIOS Flash Update (F12 Menu) / Dell SupportAssist",
+      "flashbackRenameRule": "FAT32 USB root BIOS_IMG.rcv (for Ctrl + Esc Dell BIOS Recovery)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell/"
+    },
+    {
+      "slug": "lenovo",
+      "name": "Lenovo",
+      "biosKeys": [
+        "F1",
+        "F2",
+        "NOVO"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "NOVO",
+        "Enter"
+      ],
+      "flashUtility": "Lenovo Vantage / Bootable CD-USB BIOS Utility / LVFS (fwupd)",
+      "flashbackRenameRule": "Official ThinkPad ISO/EXE updater or Self-Healing BIOS backup on modern models",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo/"
+    },
+    {
+      "slug": "asus",
+      "name": "ASUS",
+      "biosKeys": [
+        "F2",
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F8",
+        "ESC"
+      ],
+      "recoveryKeys": [
+        "BIOS FlashBack Button"
+      ],
+      "flashUtility": "ASUS EZ Flash 3 / USB BIOS FlashBack / MyASUS",
+      "flashbackRenameRule": "Run bundled BIOSRenamer.exe (e.g., RSB550FG.CAP) on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.asus.com/support/download-center/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/asus/"
+    },
+    {
+      "slug": "msi",
+      "name": "MSI",
+      "biosKeys": [
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F11"
+      ],
+      "recoveryKeys": [
+        "Flash BIOS Button"
+      ],
+      "flashUtility": "MSI M-Flash / Flash BIOS Button (CPU-less)",
+      "flashbackRenameRule": "Rename extracted BIOS file to exactly MSI.ROM on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.msi.com/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/msi/"
+    },
+    {
+      "slug": "gigabyte",
+      "name": "Gigabyte",
+      "biosKeys": [
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Q-Flash Plus Button"
+      ],
+      "flashUtility": "Gigabyte Q-Flash (F8 in BIOS) / Q-Flash Plus (CPU-less)",
+      "flashbackRenameRule": "Rename extracted BIOS file strictly to GIGABYTE.bin on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.gigabyte.com/Support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/gigabyte/"
+    },
+    {
+      "slug": "acer",
+      "name": "Acer",
+      "biosKeys": [
+        "F2",
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Alt + F10"
+      ],
+      "flashUtility": "InsydeH2O Windows BIOS Flasher / Crisis Recovery (Fn + Esc)",
+      "flashbackRenameRule": "InsydeH2O Crisis Recovery (Fn + Esc) uses model-specific .fd filename from official package",
+      "officialSupportUrl": "https://www.acer.com/us-en/support/drivers-and-manuals",
+      "referenceUrl": "https://biosarchives.com/bios-keys/acer/"
+    },
+    {
+      "slug": "chromebook",
+      "name": "Chromebook",
+      "biosKeys": [
+        "Esc + Refresh + Power"
+      ],
+      "bootMenuKeys": [
+        "Ctrl + L",
+        "Ctrl + U"
+      ],
+      "recoveryKeys": [
+        "Refresh + Power"
+      ],
+      "flashUtility": "ChromeOS Verified Automatic Firmware Update / Official Recovery Utility",
+      "flashbackRenameRule": "Managed via ChromeOS Recovery Utility USB (no manual rename; SPI WP hardware-protected)",
+      "officialSupportUrl": "https://support.google.com/chromebook/answer/1080595",
+      "referenceUrl": "https://biosarchives.com/bios-keys/chromebook/"
+    }
+  ],
+  "models": [
+    {
+      "slug": "hp-pavilion-15",
+      "brand": "HP",
+      "model": "HP Pavilion 15",
+      "category": "Laptop",
+      "platform": "Intel Core 10th–13th Gen / AMD Ryzen 5000–7000U (InsydeH2O UEFI)",
+      "biosKey": "F10 (or Esc -> F10)",
+      "bootMenuKey": "F9",
+      "biosFlashMethod": "HP SoftPaq Windows Installer / USB Crisis Recovery (Win + B)",
+      "flashbackRenameFile": "Prepared automatically inside /Hewlett-Packard/BIOS/Current/ by HP SoftPaq USB wizard",
+      "cmosBattery": "Uses main internal Li-Ion pack on 2020+ revisions (older 15-cs/cw models use CR2032 holder)",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers/laptops",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp-pavilion-15/"
+    },
+    {
+      "slug": "hp-elitebook-840",
+      "brand": "HP",
+      "model": "HP EliteBook 840 (G3–G11)",
+      "category": "Laptop",
+      "platform": "Intel Core 6th–14th Gen / Core Ultra (Commercial HP Sure Start UEFI)",
+      "biosKey": "F10",
+      "bootMenuKey": "F9",
+      "biosFlashMethod": "F10 Native Network BIOS Update / HP Image Assistant / FAT32 USB",
+      "flashbackRenameFile": "/Hewlett-Packard/BIOS/New/<board-id>.bin generated by official HP SoftPaq",
+      "cmosBattery": "CR2032 wired CMOS cell on G3–G6; main battery RTC on G7–G11",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers/laptops",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp-elitebook-840/"
+    },
+    {
+      "slug": "dell-optiplex-7050",
+      "brand": "Dell",
+      "model": "Dell OptiPlex 7050",
+      "category": "Desktop",
+      "platform": "Intel Q270 Chipset / LGA1151 6th & 7th Gen Core (Tower, SFF, Micro)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 One-Time Boot Menu -> BIOS Flash Update (FAT32 USB) or Official Windows EXE",
+      "flashbackRenameFile": "Place official OptiPlex_7050_*.exe directly on FAT32 USB root (no rename for F12 Flash)",
+      "cmosBattery": "Standard CR2032 3V Lithium Coin Cell (clipped flat holder on system board)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us/product-support/product/optiplex-7050-desktop/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-optiplex-7050/"
+    },
+    {
+      "slug": "dell-latitude-5420",
+      "brand": "Dell",
+      "model": "Dell Latitude 5420",
+      "category": "Laptop",
+      "platform": "Intel 11th Gen Tiger Lake (vPro / non-vPro Enterprise UEFI)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 -> BIOS Flash Update (FAT32 USB) / Dell Command Update / LVFS fwupd",
+      "flashbackRenameFile": "BIOS_IMG.rcv on FAT32 USB root for Ctrl + Esc Recovery (or raw official .exe for F12 Flash)",
+      "cmosBattery": "Wired CR2032 coin cell (2-pin micro connector on bottom right of board) plus main battery RTC backup",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us/product-support/product/latitude-14-5420-laptop/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-latitude-5420/"
+    },
+    {
+      "slug": "dell-xps-15",
+      "brand": "Dell",
+      "model": "Dell XPS 15 (9500 / 9510 / 9520 / 9530)",
+      "category": "Laptop",
+      "platform": "Intel Core 10th–13th Gen H-Series (XPS 9500 / 9510 / 9520 / 9530)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 -> BIOS Flash Update (FAT32 USB-C) / Windows Update Capsule / Dell Update",
+      "flashbackRenameFile": "BIOS_IMG.rcv on FAT32 USB root for Ctrl + Esc Recovery",
+      "cmosBattery": "Main Li-Ion battery provides RTC power on 9500–9530 (no separate CR2032 coin cell)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-xps-15/"
+    },
+    {
+      "slug": "lenovo-thinkpad-t480",
+      "brand": "Lenovo",
+      "model": "Lenovo ThinkPad T480",
+      "category": "Laptop",
+      "platform": "Intel 8th Gen Kaby Lake-R (Type 20L5 / 20L6 Commercial UEFI)",
+      "biosKey": "F1 (or Enter -> F1)",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "Lenovo Vantage / Bootable USB ISO / Linux fwupdmgr (LVFS)",
+      "flashbackRenameFile": "Official Lenovo Bootable ISO (el-torito -> USB via geteltorito) or Windows BIOS Utility",
+      "cmosBattery": "2-pin yellow-wrapped CR2032/CR2025 wired CMOS battery under bottom cover",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t480-type-20l5-20l6/downloads",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo-thinkpad-t480/"
+    },
+    {
+      "slug": "lenovo-ideapad-3",
+      "brand": "Lenovo",
+      "model": "Lenovo IdeaPad 3",
+      "category": "Laptop",
+      "platform": "Intel 10th–13th Gen / AMD Ryzen 3000–7000U (Insyde / AMI Consumer UEFI)",
+      "biosKey": "F2 (or Fn + F2) / Novo Button",
+      "bootMenuKey": "F12 (or Fn + F12)",
+      "biosFlashMethod": "Official Lenovo Windows BIOS Updater EXE (verify exact 10-char MTM / model like 15ADA05 or 15ITL6)",
+      "flashbackRenameFile": "Self-contained Lenovo Windows updater; Crisis recovery uses model-specific .fd via Fn + R",
+      "cmosBattery": "Main internal battery RTC on most Slim 3 / 15ITL6 / 15ALC6 revisions; wired CR2032 on older 15IIL05/15ADA05",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo-ideapad-3/"
+    },
+    {
+      "slug": "asus-rog-strix-b550-f",
+      "brand": "ASUS",
+      "model": "ASUS ROG STRIX B550-F GAMING",
+      "category": "Motherboard",
+      "platform": "AMD AM4 Socket / AMD B550 Chipset (DDR4, PCIe 4.0)",
+      "biosKey": "Del or F2",
+      "bootMenuKey": "F8",
+      "biosFlashMethod": "ASUS EZ Flash 3 / CPU-less USB BIOS FlashBack",
+      "flashbackRenameFile": "RSB550FG.CAP (non-WiFi) / RSB550FGW.CAP (Wi-Fi) / RSB550FW2.CAP (Wi-Fi II)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (located beneath primary PCIe x16 GPU slot)",
+      "officialSupportUrl": "https://rog.asus.com/motherboards/rog-strix/rog-strix-b550-f-gaming-model/helpdesk_bios/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/asus-rog-strix-b550-f/"
+    },
+    {
+      "slug": "msi-b550-tomahawk",
+      "brand": "MSI",
+      "model": "MSI MAG B550 TOMAHAWK",
+      "category": "Motherboard",
+      "platform": "AMD AM4 Socket / AMD B550 Chipset (DDR4, Dual LAN)",
+      "biosKey": "Del",
+      "bootMenuKey": "F11",
+      "biosFlashMethod": "MSI M-Flash / Rear I/O Flash BIOS Button (MSI.ROM)",
+      "flashbackRenameFile": "MSI.ROM (exact uppercase name on root of FAT32 MBR USB 2.0 drive)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (between PCI_E1 and PCI_E3 slots)",
+      "officialSupportUrl": "https://www.msi.com/Motherboard/MAG-B550-TOMAHAWK/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/msi-b550-tomahawk/"
+    },
+    {
+      "slug": "gigabyte-b650-aorus-elite",
+      "brand": "Gigabyte",
+      "model": "Gigabyte B650 AORUS ELITE AX",
+      "category": "Motherboard",
+      "platform": "AMD AM5 Socket / AMD B650 Chipset (DDR5, Ryzen 7000 & 9000 Series)",
+      "biosKey": "Del",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "Q-Flash (F8 in BIOS) / CPU-less Q-Flash Plus (GIGABYTE.bin)",
+      "flashbackRenameFile": "GIGABYTE.bin (exact capitalization on FAT32 MBR USB root)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (near lower PCIe slots)",
+      "officialSupportUrl": "https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-10-11/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/gigabyte-b650-aorus-elite/"
+    },
+    {
+      "slug": "acer-nitro-5",
+      "brand": "Acer",
+      "model": "Acer Nitro 5",
+      "category": "Laptop",
+      "platform": "Intel 10th–13th Gen / AMD Ryzen 5000–7000H (AN515-55/57/58, AN515-45/46)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12 (must enable in BIOS Main tab first)",
+      "biosFlashMethod": "Official Acer InsydeH2O Windows BIOS EXE (match exact AN515-xx SKU!)",
+      "flashbackRenameFile": "Self-contained official Acer EXE; Insyde Crisis requires extracted .fd file on FAT32 USB",
+      "cmosBattery": "2-pin wired CR2032 coin battery on AN515-55/57; main battery RTC on newer AN515-58/Nitro V",
+      "officialSupportUrl": "https://www.acer.com/us-en/support/drivers-and-manuals",
+      "referenceUrl": "https://biosarchives.com/bios-keys/acer-nitro-5/"
+    }
+  ],
+  "beepAndLedCodes": [
+    {
+      "id": "ami-1-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Short Beep",
+      "shortCode": "1S",
+      "subsystem": "RAM / Memory",
+      "severity": "medium",
+      "summary": "Normal POST pass on modern AMI UEFI (or DRAM refresh failure if screen stays permanently black)."
+    },
+    {
+      "id": "ami-2-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "2 Short Beeps",
+      "shortCode": "2S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Memory parity / early DRAM detection failure during PEI."
+    },
+    {
+      "id": "ami-3-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "3 Short Beeps",
+      "shortCode": "3S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Base 64KB memory read/write test failure (classic AMI RAM fault)."
+    },
+    {
+      "id": "ami-4-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "4 Short Beeps",
+      "shortCode": "4S",
+      "subsystem": "System Board / EC",
+      "severity": "high",
+      "summary": "System timer (RTC / programmable interval timer) failure or severe memory error."
+    },
+    {
+      "id": "ami-5-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "5 Short Beeps",
+      "shortCode": "5S",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "Processor error (or on Gigabyte/ASRock UEFI, missing console/GPU output when no iGPU is present)."
+    },
+    {
+      "id": "ami-6-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "6 Short Beeps",
+      "shortCode": "6S",
+      "subsystem": "System Board / EC",
+      "severity": "high",
+      "summary": "Gate A20 / Super I/O keyboard controller failure."
+    },
+    {
+      "id": "ami-1-long-2-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Video / Graphics initialization error (no PCIe GPU or failed DisplayPort handshake)."
+    },
+    {
+      "id": "ami-1-long-3-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 3 Short Beeps",
+      "shortCode": "1L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "ASUS/AMI UEFI no-VGA detected (or extended memory test failure on legacy AMI)."
+    },
+    {
+      "id": "ami-1-long-4-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 4 Short Beeps",
+      "shortCode": "1L-4S",
+      "subsystem": "CPU / VRM",
+      "severity": "high",
+      "summary": "Hardware component failure — commonly CPU fan missing, over-temperature, or VRM fault on ASUS AMI UEFI."
+    },
+    {
+      "id": "ami-8-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "8 Short Beeps",
+      "shortCode": "8S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Display memory (VRAM) read/write error on discrete graphics card."
+    },
+    {
+      "id": "award-1-long-2-short",
+      "systemId": "award",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Award BIOS video adapter initialization failure."
+    },
+    {
+      "id": "award-continuous-long",
+      "systemId": "award",
+      "patternLabel": "Repeating Long Beeps (Endless)",
+      "shortCode": "LOOP-L",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Award BIOS DRAM not detected or improperly seated."
+    },
+    {
+      "id": "award-high-low-siren",
+      "systemId": "award",
+      "patternLabel": "High-Low Repeating Siren",
+      "shortCode": "SIREN",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "CPU overheating, dead CPU fan, or VRM out-of-spec voltage alarm."
+    },
+    {
+      "id": "award-1-long-3-short",
+      "systemId": "award",
+      "patternLabel": "1 Long, 3 Short Beeps",
+      "shortCode": "1L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "No video card detected or faulty GPU RAM on Award BIOS."
+    },
+    {
+      "id": "phoenix-1-3-3-1",
+      "systemId": "phoenix",
+      "patternLabel": "1-3-3-1 Beep Sequence",
+      "shortCode": "1-3-3-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "AUTOSIZE DRAM failure — memory missing, unseated, or unsupported."
+    },
+    {
+      "id": "phoenix-1-2-2-3",
+      "systemId": "phoenix",
+      "patternLabel": "1-2-2-3 Beep Sequence",
+      "shortCode": "1-2-2-3",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "BIOS ROM checksum error — corrupted SPI flash firmware."
+    },
+    {
+      "id": "phoenix-1-3-1-1",
+      "systemId": "phoenix",
+      "patternLabel": "1-3-1-1 Beep Sequence",
+      "shortCode": "1-3-1-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "DRAM refresh test failure."
+    },
+    {
+      "id": "phoenix-3-3-4",
+      "systemId": "phoenix",
+      "patternLabel": "3-3-4 (or 1-3-4-3) Sequence",
+      "shortCode": "3-3-4",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Video memory initialization failure."
+    },
+    {
+      "id": "hp-2-2",
+      "systemId": "hp-caps-led",
+      "patternLabel": "2 Long, 2 Short Blinks (2.2)",
+      "shortCode": "2L-2S",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "HP Main BIOS area corrupted (checksum failure)."
+    },
+    {
+      "id": "hp-3-2",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 2 Short Blinks (3.2)",
+      "shortCode": "3L-2S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "HP Embedded Controller timed out waiting for BIOS memory initialization (RAM fault)."
+    },
+    {
+      "id": "hp-3-3",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 3 Short Blinks (3.3)",
+      "shortCode": "3L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "HP graphics controller initialization timeout."
+    },
+    {
+      "id": "hp-3-4",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 4 Short Blinks (3.4)",
+      "shortCode": "3L-4S",
+      "subsystem": "Power Rail",
+      "severity": "critical",
+      "summary": "HP Embedded Controller timed out waiting for power rail good (Power Good / VRM fault)."
+    },
+    {
+      "id": "hp-3-5",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 5 Short Blinks (3.5)",
+      "shortCode": "3L-5S",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "HP CPU not detected or failed core initialization."
+    },
+    {
+      "id": "hp-5-3",
+      "systemId": "hp-caps-led",
+      "patternLabel": "5 Long, 3 Short Blinks (5.3)",
+      "shortCode": "5L-3S",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "HP Embedded Controller cannot reach BIOS within timeout (Board / SPI / EC communication fault)."
+    },
+    {
+      "id": "hp-2-4",
+      "systemId": "hp-caps-led",
+      "patternLabel": "2 Long, 4 Short Blinks (2.4)",
+      "shortCode": "2L-4S",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "high",
+      "summary": "HP BIOS recovery in progress or attempting secondary rollback image."
+    },
+    {
+      "id": "dell-2-1",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 1 White",
+      "shortCode": "2A-1W",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "Dell CPU failure (Processor initialization fault)."
+    },
+    {
+      "id": "dell-2-2",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 2 White",
+      "shortCode": "2A-2W",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "Dell System Board: BIOS or ROM checksum failure."
+    },
+    {
+      "id": "dell-2-3",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 3 White",
+      "shortCode": "2A-3W",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Dell No Memory / RAM detected."
+    },
+    {
+      "id": "dell-2-4",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 4 White",
+      "shortCode": "2A-4W",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Dell Memory / RAM failure (detected but failed training/test)."
+    },
+    {
+      "id": "dell-2-7",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 7 White",
+      "shortCode": "2A-7W",
+      "subsystem": "GPU / Display",
+      "severity": "medium",
+      "summary": "Dell LCD failure (internal eDP screen cable or panel fault; RAM on older OptiPlex)."
+    },
+    {
+      "id": "dell-3-1",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 1 White",
+      "shortCode": "3A-1W",
+      "subsystem": "CMOS / Battery",
+      "severity": "medium",
+      "summary": "Dell CMOS coin-cell battery failure."
+    },
+    {
+      "id": "dell-3-2",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 2 White",
+      "shortCode": "3A-2W",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Dell PCI / Video card or chip failure."
+    },
+    {
+      "id": "dell-3-3",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 3 White (or 3A-4W)",
+      "shortCode": "3A-3W",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "high",
+      "summary": "Dell BIOS Recovery image not found (3A-3W) or recovery image invalid (3A-4W)."
+    },
+    {
+      "id": "tp-1-3-3-1",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "1-3-3-1 Short Beeps",
+      "shortCode": "1-3-3-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Classic ThinkPad DIMM / memory not detected or incompatible."
+    },
+    {
+      "id": "tp-1-long-2-short",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "ThinkPad video / display initialization fault (or system board)."
+    },
+    {
+      "id": "tp-4x4-short",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "4 Cycles of 4 Short Beeps (4-4-4-4)",
+      "shortCode": "4-4-4-4",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "ThinkPad Security Chip (TPM / TCG) communication failure."
+    },
+    {
+      "id": "tp-5-short-twice",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "5 Short Beeps (Repeated Twice)",
+      "shortCode": "5S-5S",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "ThinkPad system board / security hardware fault."
+    },
+    {
+      "id": "tp-musical-tone",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "Harmonic Musical Melody (Modern ThinkPads)",
+      "shortCode": "TONE",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Modern ThinkPads (T480/T14/X1 Carbon) encode 4-digit hex errors into a short musical tone."
+    },
+    {
+      "id": "asus-qled-orange",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Yellow-Orange LED (DRAM)",
+      "shortCode": "DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "ASUS Q-LED halted at DRAM detection or DDR5 memory training."
+    },
+    {
+      "id": "asus-qled-red",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Red LED (CPU)",
+      "shortCode": "CPU",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "ASUS Q-LED halted at CPU initialization."
+    },
+    {
+      "id": "asus-qled-white",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid White LED (VGA)",
+      "shortCode": "VGA",
+      "subsystem": "GPU / Display",
+      "severity": "medium",
+      "summary": "ASUS Q-LED halted at GPU / display output handshake."
+    },
+    {
+      "id": "asus-qled-green",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Yellow-Green LED (BOOT)",
+      "shortCode": "BOOT",
+      "subsystem": "Boot Drive",
+      "severity": "medium",
+      "summary": "ASUS Q-LED passed CPU/RAM/GPU and stopped because no bootable OS drive was found (or you are in BIOS)."
+    },
+    {
+      "id": "msi-ez-cpu",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Red LED — CPU",
+      "shortCode": "CPU",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "MSI EZ Debug LED: CPU not detected or failed initialization."
+    },
+    {
+      "id": "msi-ez-dram",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Yellow/White LED — DRAM",
+      "shortCode": "DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "MSI EZ Debug LED: RAM not detected or failed training."
+    },
+    {
+      "id": "msi-ez-cpu-dram",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Red CPU + Yellow DRAM Together (AM5)",
+      "shortCode": "CPU+DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "medium",
+      "summary": "Normal MSI AM5 DDR5 first-boot memory training state (fault only if stuck > 4 minutes)."
+    },
+    {
+      "id": "msi-ez-vga",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid White LED — VGA",
+      "shortCode": "VGA",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "MSI EZ Debug LED: Graphics card not detected or failed init."
+    },
+    {
+      "id": "msi-ez-boot",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Green/White LED — BOOT",
+      "shortCode": "BOOT",
+      "subsystem": "Boot Drive",
+      "severity": "medium",
+      "summary": "MSI EZ Debug LED: Booting device not detected or failed (CPU/RAM/GPU all passed!)."
+    }
+  ],
+  "postHexCodes": [
+    {
+      "code": "00",
+      "hexUpper": "00",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "critical",
+      "shortMeaning": "Not Used / CPU Not Initialized (Dead CPU, VRM, or Missing EPS Power)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-00/"
+    },
+    {
+      "code": "02",
+      "hexUpper": "02",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "warning",
+      "shortMeaning": "AP Initialization Before Microcode Loading",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=02"
+    },
+    {
+      "code": "0d",
+      "hexUpper": "0D",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Reserved AMI SEC/PEI Error — AM4/AM5 DRAM Timing & SMBus Monitoring Conflict",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-0d/"
+    },
+    {
+      "code": "10",
+      "hexUpper": "10",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "PEI Core Is Started (Stuck Early CPU/Memory Init)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=10"
+    },
+    {
+      "code": "14",
+      "hexUpper": "14",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Pre-Memory CPU Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=14"
+    },
+    {
+      "code": "15",
+      "hexUpper": "15",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "training-wait",
+      "shortMeaning": "Pre-Memory System Agent Init — Normal AM5 DDR5 Memory Training Checkpoint",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=15"
+    },
+    {
+      "code": "19",
+      "hexUpper": "19",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Pre-Memory PCH / Southbridge Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=19"
+    },
+    {
+      "code": "22",
+      "hexUpper": "22",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "OEM Pre-Memory Initialization — Memory Training Retry",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=22"
+    },
+    {
+      "code": "32",
+      "hexUpper": "32",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "CPU Post-Memory Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=32"
+    },
+    {
+      "code": "3E",
+      "hexUpper": "3E",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Post-Memory PCH Initialization (or CPU Temp Display Once in OS on MSI/ASUS)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=3E"
+    },
+    {
+      "code": "4F",
+      "hexUpper": "4F",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "DXE IPL Is Started (Handoff from Memory Init to UEFI Drivers)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=4F"
+    },
+    {
+      "code": "50",
+      "hexUpper": "50",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Initialization Error — Invalid Memory Type or Incompatible Speed",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=50"
+    },
+    {
+      "code": "53",
+      "hexUpper": "53",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Initialization Error — No Usable Memory Detected",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=53"
+    },
+    {
+      "code": "54",
+      "hexUpper": "54",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Unspecified Memory Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=54"
+    },
+    {
+      "code": "55",
+      "hexUpper": "55",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Not Installed (No Usable RAM Detected)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-55/"
+    },
+    {
+      "code": "62",
+      "hexUpper": "62",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Installation of the PCH Runtime Services (Often GPU/PCIe Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=62"
+    },
+    {
+      "code": "64",
+      "hexUpper": "64",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "CPU DXE Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=64"
+    },
+    {
+      "code": "7F",
+      "hexUpper": "7F",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "warning",
+      "shortMeaning": "Reserved for Future AMI DXE Codes (PCIe / Storage Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=7F"
+    },
+    {
+      "code": "90",
+      "hexUpper": "90",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Boot Device Selection (BDS) Phase Is Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=90"
+    },
+    {
+      "code": "92",
+      "hexUpper": "92",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Bus Initialization Is Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=92"
+    },
+    {
+      "code": "94",
+      "hexUpper": "94",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Bus Enumeration (Resource Assignment Failure)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=94"
+    },
+    {
+      "code": "97",
+      "hexUpper": "97",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Console Output Devices Connect (GPU/Monitor Handshake)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=97"
+    },
+    {
+      "code": "98",
+      "hexUpper": "98",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Console Input Devices Connect (Keyboard / Mouse / USB Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=98"
+    },
+    {
+      "code": "99",
+      "hexUpper": "99",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Super IO Initialization (USB / PCIe / Front-Panel Short)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=99"
+    },
+    {
+      "code": "9C",
+      "hexUpper": "9C",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "USB Detect (Hung USB Peripheral, Hub, or Flash Drive)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=9C"
+    },
+    {
+      "code": "A0",
+      "hexUpper": "A0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "IDE Initialization Started — Normal Healthy OS Boot Handoff on ASUS/ASRock",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A0"
+    },
+    {
+      "code": "A2",
+      "hexUpper": "A2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "IDE Detect — Storage Drive, SATA/NVMe Boot, or Display Output Stall",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-a2/"
+    },
+    {
+      "code": "A6",
+      "hexUpper": "A6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "SCSI Detect — Storage Controller / NVMe / SATA Enumeration",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A6"
+    },
+    {
+      "code": "A9",
+      "hexUpper": "A9",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "normal-boot",
+      "shortMeaning": "Start of Setup — System Is Currently Inside BIOS/UEFI Menu",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A9"
+    },
+    {
+      "code": "AA",
+      "hexUpper": "AA",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "System Has Transitioned Into ACPI Mode — Normal Running OS State",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=AA"
+    },
+    {
+      "code": "Ab",
+      "hexUpper": "AB",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "normal-boot",
+      "shortMeaning": "Setup Input Wait — Waiting Inside BIOS Menu for User Input",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=Ab"
+    },
+    {
+      "code": "Ad",
+      "hexUpper": "AD",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "Ready to Boot Event — Passing Control to OS Bootloader",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=Ad"
+    },
+    {
+      "code": "AE",
+      "hexUpper": "AE",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "Legacy Boot Event — Handing Off to Legacy MBR / CSM Bootloader",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=AE"
+    },
+    {
+      "code": "b2",
+      "hexUpper": "B2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Legacy Option ROM Initialization (GPU VBIOS / PCIe Card Stall)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b2"
+    },
+    {
+      "code": "b4",
+      "hexUpper": "B4",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "USB Hot Plug — Faulty or High-Draw USB Device Stalling POST",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b4"
+    },
+    {
+      "code": "b6",
+      "hexUpper": "B6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Clean-up of NVRAM — Corrupted CMOS / BIOS Settings",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b6"
+    },
+    {
+      "code": "C5",
+      "hexUpper": "C5",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "AM5 DDR5 Memory Training Failure / OEM Pre-Memory DRAM Fault",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-c5/"
+    },
+    {
+      "code": "d0",
+      "hexUpper": "D0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "critical",
+      "shortMeaning": "CPU Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d0"
+    },
+    {
+      "code": "d1",
+      "hexUpper": "D1",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "North Bridge / System Agent / IOD Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d1"
+    },
+    {
+      "code": "d3",
+      "hexUpper": "D3",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Some Architectural Protocols Are Not Available (BIOS/NVRAM Fault)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d3"
+    },
+    {
+      "code": "d4",
+      "hexUpper": "D4",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Resource Allocation Error — Out of Resources",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d4"
+    },
+    {
+      "code": "d6",
+      "hexUpper": "D6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "No Console Output Devices Are Found (GPU / Monitor Handshake Missing)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-d6/"
+    },
+    {
+      "code": "d7",
+      "hexUpper": "D7",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "No Console Input Devices Are Found (Keyboard / Mouse Missing)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d7"
+    },
+    {
+      "code": "E0",
+      "hexUpper": "E0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "warning",
+      "shortMeaning": "S3 Resume Is Started (Sleep Wake Stall)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=E0"
+    },
+    {
+      "code": "E1",
+      "hexUpper": "E1",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "warning",
+      "shortMeaning": "S3 Boot Script Execution Failure",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=E1"
+    },
+    {
+      "code": "F2",
+      "hexUpper": "F2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "Recovery / Fault",
+      "severity": "critical",
+      "shortMeaning": "Recovery Process Started (Corrupted BIOS / Memory Training Fallback)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=F2"
+    },
+    {
+      "code": "F9",
+      "hexUpper": "F9",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "Recovery / Fault",
+      "severity": "critical",
+      "shortMeaning": "Recovery Capsule Is Not Found (BIOS Recovery USB Required)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=F9"
+    },
+    {
+      "code": "FE",
+      "hexUpper": "FE",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Reserved AMI Error — Severe DRAM / IMC Initialization Failure",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=FE"
+    }
+  ],
+  "spiFlashChips": [
+    {
+      "partNumber": "W25Q16JV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 16,
+      "capacityMB": 2,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 15",
+      "packages": [
+        "SOIC-8 (150mil)",
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "MX25L1606E",
+        "GD25Q16C"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q16JV"
+    },
+    {
+      "partNumber": "W25Q32FV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 32,
+      "capacityMB": 4,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 16",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q32JV",
+        "MX25L3206E"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32FV"
+    },
+    {
+      "partNumber": "W25Q32JV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 32,
+      "capacityMB": 4,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 16",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q32FV",
+        "MX25L3206E"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32JV"
+    },
+    {
+      "partNumber": "W25Q32FW",
+      "manufacturer": "Winbond",
+      "capacityMbit": 32,
+      "capacityMB": 4,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–1.95V",
+      "is18VHazard": true,
+      "jedecId": "EF 60 16",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32FW"
+    },
+    {
+      "partNumber": "W25Q64FV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)",
+        "SOIC-16 (300mil)"
+      ],
+      "compatibleParts": [
+        "W25Q64JV",
+        "MX25L6406E",
+        "MX25L6473F",
+        "GD25Q64C",
+        "N25Q064A",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/w25q64fv/"
+    },
+    {
+      "partNumber": "W25Q64JV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "MX25L6406E",
+        "MX25L6473F",
+        "GD25Q64C",
+        "N25Q064A",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q64JV"
+    },
+    {
+      "partNumber": "W25Q64FW",
+      "manufacturer": "Winbond",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–1.95V",
+      "is18VHazard": true,
+      "jedecId": "EF 60 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "MX25U6435F",
+        "GD25LQ64C"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/w25q64fw/"
+    },
+    {
+      "partNumber": "W25Q128FV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)",
+        "SOIC-16 (300mil)"
+      ],
+      "compatibleParts": [
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25B127D",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q128FV"
+    },
+    {
+      "partNumber": "W25Q128JV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "MX25L12873F",
+        "GD25B127D",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/w25q128jv/"
+    },
+    {
+      "partNumber": "W25Q128FW",
+      "manufacturer": "Winbond",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–1.95V",
+      "is18VHazard": true,
+      "jedecId": "EF 60 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "MX25U12873F",
+        "GD25LQ128D"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/w25q128fw/"
+    },
+    {
+      "partNumber": "W25Q256JV",
+      "manufacturer": "Winbond",
+      "capacityMbit": 256,
+      "capacityMB": 32,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "EF 40 19",
+      "packages": [
+        "SOIC-16 (300mil)",
+        "WSON-8 (8x6mm)",
+        "SOIC-8 (208mil)"
+      ],
+      "compatibleParts": [
+        "MX25L25673G"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/w25q256jv/"
+    },
+    {
+      "partNumber": "W25Q256JW",
+      "manufacturer": "Winbond",
+      "capacityMbit": 256,
+      "capacityMB": 32,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.7V–1.95V",
+      "is18VHazard": true,
+      "jedecId": "EF 60 19",
+      "packages": [
+        "WSON-8 (8x6mm)",
+        "SOIC-16 (300mil)",
+        "SOIC-8 (208mil)"
+      ],
+      "compatibleParts": [],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q256JW"
+    },
+    {
+      "partNumber": "MX25L3206E",
+      "manufacturer": "Macronix",
+      "capacityMbit": 32,
+      "capacityMB": 4,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C2 20 16",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q32FV",
+        "W25Q32JV"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L3206E"
+    },
+    {
+      "partNumber": "MX25L6406E",
+      "manufacturer": "Macronix",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C2 20 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "SOIC-16 (300mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "W25Q64JV",
+        "MX25L6473F",
+        "GD25Q64C",
+        "N25Q064A",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/mx25l6406e/"
+    },
+    {
+      "partNumber": "MX25L6473F",
+      "manufacturer": "Macronix",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C2 20 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "W25Q64JV",
+        "MX25L6406E",
+        "GD25Q64C",
+        "N25Q064A",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L6473F"
+    },
+    {
+      "partNumber": "MX25L12873F",
+      "manufacturer": "Macronix",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C2 20 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)",
+        "SOIC-16 (300mil)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "GD25B127D",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/mx25l12873f/"
+    },
+    {
+      "partNumber": "MX25L25673G",
+      "manufacturer": "Macronix",
+      "capacityMbit": 256,
+      "capacityMB": 32,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C2 20 19",
+      "packages": [
+        "SOIC-16 (300mil)",
+        "WSON-8 (8x6mm)",
+        "SOIC-8 (208mil)"
+      ],
+      "compatibleParts": [
+        "W25Q256JV"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L25673G"
+    },
+    {
+      "partNumber": "MX25U6435F",
+      "manufacturer": "Macronix",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–2.0V",
+      "is18VHazard": true,
+      "jedecId": "C2 25 37",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FW",
+        "GD25LQ64C"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25U6435F"
+    },
+    {
+      "partNumber": "MX25U12873F",
+      "manufacturer": "Macronix",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–2.0V",
+      "is18VHazard": true,
+      "jedecId": "C2 25 38",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FW",
+        "GD25LQ128D"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25U12873F"
+    },
+    {
+      "partNumber": "GD25Q64C",
+      "manufacturer": "GigaDevice",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C8 40 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "W25Q64JV",
+        "MX25L6406E",
+        "MX25L6473F",
+        "N25Q064A",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/gd25q64c/"
+    },
+    {
+      "partNumber": "GD25Q127C",
+      "manufacturer": "GigaDevice",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C8 40 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25B127D",
+        "MT25QL128ABA",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25Q127C"
+    },
+    {
+      "partNumber": "GD25B127D",
+      "manufacturer": "GigaDevice",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "C8 40 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/chips/gd25b127d/"
+    },
+    {
+      "partNumber": "GD25LQ64C",
+      "manufacturer": "GigaDevice",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–2.0V",
+      "is18VHazard": true,
+      "jedecId": "C8 60 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FW",
+        "MX25U6435F"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25LQ64C"
+    },
+    {
+      "partNumber": "GD25LQ128D",
+      "manufacturer": "GigaDevice",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "1.8V",
+      "voltageRange": "1.65V–2.0V",
+      "is18VHazard": true,
+      "jedecId": "C8 60 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FW",
+        "MX25U12873F"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25LQ128D"
+    },
+    {
+      "partNumber": "N25Q064A",
+      "manufacturer": "Micron",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "20 BA 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "V-PDFN-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "W25Q64JV",
+        "MX25L6406E",
+        "MX25L6473F",
+        "GD25Q64C",
+        "XM25QH64A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=N25Q064A"
+    },
+    {
+      "partNumber": "MT25QL128ABA",
+      "manufacturer": "Micron",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "20 BA 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "W-PDFN-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25B127D",
+        "GD25Q127C",
+        "IS25LP128F",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MT25QL128ABA"
+    },
+    {
+      "partNumber": "IS25LP128F",
+      "manufacturer": "ISSI",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.3V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "9D 60 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25B127D",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "XM25QH128A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=IS25LP128F"
+    },
+    {
+      "partNumber": "XM25QH64A",
+      "manufacturer": "XMC",
+      "capacityMbit": 64,
+      "capacityMB": 8,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "20 70 17",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q64FV",
+        "W25Q64JV",
+        "MX25L6406E",
+        "MX25L6473F",
+        "GD25Q64C",
+        "N25Q064A"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=XM25QH64A"
+    },
+    {
+      "partNumber": "XM25QH128A",
+      "manufacturer": "XMC",
+      "capacityMbit": 128,
+      "capacityMB": 16,
+      "voltageNominal": "3.3V",
+      "voltageRange": "2.7V–3.6V",
+      "is18VHazard": false,
+      "jedecId": "20 70 18",
+      "packages": [
+        "SOIC-8 (208mil)",
+        "WSON-8 (6x5mm)"
+      ],
+      "compatibleParts": [
+        "W25Q128FV",
+        "W25Q128JV",
+        "MX25L12873F",
+        "GD25B127D",
+        "GD25Q127C",
+        "MT25QL128ABA",
+        "IS25LP128F"
+      ],
+      "referenceUrl": "https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=XM25QH128A"
+    }
+  ]
+}

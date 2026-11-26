@@ -1,0 +1,734 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "https://biosarchives.com/tools/post-code-lookup/",
+  "license": "MIT",
+  "generatedForRelease": "2026-11-25",
+  "count": 48,
+  "postHexCodes": [
+    {
+      "code": "00",
+      "hexUpper": "00",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "critical",
+      "shortMeaning": "Not Used / CPU Not Initialized (Dead CPU, VRM, or Missing EPS Power)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-00/"
+    },
+    {
+      "code": "02",
+      "hexUpper": "02",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "warning",
+      "shortMeaning": "AP Initialization Before Microcode Loading",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=02"
+    },
+    {
+      "code": "0d",
+      "hexUpper": "0D",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Reserved AMI SEC/PEI Error — AM4/AM5 DRAM Timing & SMBus Monitoring Conflict",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-0d/"
+    },
+    {
+      "code": "10",
+      "hexUpper": "10",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "PEI Core Is Started (Stuck Early CPU/Memory Init)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=10"
+    },
+    {
+      "code": "14",
+      "hexUpper": "14",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Pre-Memory CPU Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=14"
+    },
+    {
+      "code": "15",
+      "hexUpper": "15",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "training-wait",
+      "shortMeaning": "Pre-Memory System Agent Init — Normal AM5 DDR5 Memory Training Checkpoint",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=15"
+    },
+    {
+      "code": "19",
+      "hexUpper": "19",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Pre-Memory PCH / Southbridge Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=19"
+    },
+    {
+      "code": "22",
+      "hexUpper": "22",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "OEM Pre-Memory Initialization — Memory Training Retry",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=22"
+    },
+    {
+      "code": "32",
+      "hexUpper": "32",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "CPU Post-Memory Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=32"
+    },
+    {
+      "code": "3E",
+      "hexUpper": "3E",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "warning",
+      "shortMeaning": "Post-Memory PCH Initialization (or CPU Temp Display Once in OS on MSI/ASUS)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=3E"
+    },
+    {
+      "code": "4F",
+      "hexUpper": "4F",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "DXE IPL Is Started (Handoff from Memory Init to UEFI Drivers)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=4F"
+    },
+    {
+      "code": "50",
+      "hexUpper": "50",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Initialization Error — Invalid Memory Type or Incompatible Speed",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=50"
+    },
+    {
+      "code": "53",
+      "hexUpper": "53",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Initialization Error — No Usable Memory Detected",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=53"
+    },
+    {
+      "code": "54",
+      "hexUpper": "54",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Unspecified Memory Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=54"
+    },
+    {
+      "code": "55",
+      "hexUpper": "55",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Memory Not Installed (No Usable RAM Detected)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-55/"
+    },
+    {
+      "code": "62",
+      "hexUpper": "62",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Installation of the PCH Runtime Services (Often GPU/PCIe Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=62"
+    },
+    {
+      "code": "64",
+      "hexUpper": "64",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "CPU DXE Initialization Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=64"
+    },
+    {
+      "code": "7F",
+      "hexUpper": "7F",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "warning",
+      "shortMeaning": "Reserved for Future AMI DXE Codes (PCIe / Storage Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=7F"
+    },
+    {
+      "code": "90",
+      "hexUpper": "90",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Boot Device Selection (BDS) Phase Is Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=90"
+    },
+    {
+      "code": "92",
+      "hexUpper": "92",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Bus Initialization Is Started",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=92"
+    },
+    {
+      "code": "94",
+      "hexUpper": "94",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Bus Enumeration (Resource Assignment Failure)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=94"
+    },
+    {
+      "code": "97",
+      "hexUpper": "97",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Console Output Devices Connect (GPU/Monitor Handshake)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=97"
+    },
+    {
+      "code": "98",
+      "hexUpper": "98",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Console Input Devices Connect (Keyboard / Mouse / USB Hang)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=98"
+    },
+    {
+      "code": "99",
+      "hexUpper": "99",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Super IO Initialization (USB / PCIe / Front-Panel Short)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=99"
+    },
+    {
+      "code": "9C",
+      "hexUpper": "9C",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "USB Detect (Hung USB Peripheral, Hub, or Flash Drive)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=9C"
+    },
+    {
+      "code": "A0",
+      "hexUpper": "A0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "IDE Initialization Started — Normal Healthy OS Boot Handoff on ASUS/ASRock",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A0"
+    },
+    {
+      "code": "A2",
+      "hexUpper": "A2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "IDE Detect — Storage Drive, SATA/NVMe Boot, or Display Output Stall",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-a2/"
+    },
+    {
+      "code": "A6",
+      "hexUpper": "A6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "SCSI Detect — Storage Controller / NVMe / SATA Enumeration",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A6"
+    },
+    {
+      "code": "A9",
+      "hexUpper": "A9",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "normal-boot",
+      "shortMeaning": "Start of Setup — System Is Currently Inside BIOS/UEFI Menu",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=A9"
+    },
+    {
+      "code": "AA",
+      "hexUpper": "AA",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "System Has Transitioned Into ACPI Mode — Normal Running OS State",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=AA"
+    },
+    {
+      "code": "Ab",
+      "hexUpper": "AB",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "normal-boot",
+      "shortMeaning": "Setup Input Wait — Waiting Inside BIOS Menu for User Input",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=Ab"
+    },
+    {
+      "code": "Ad",
+      "hexUpper": "AD",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "Ready to Boot Event — Passing Control to OS Bootloader",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=Ad"
+    },
+    {
+      "code": "AE",
+      "hexUpper": "AE",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "normal-boot",
+      "shortMeaning": "Legacy Boot Event — Handing Off to Legacy MBR / CSM Bootloader",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=AE"
+    },
+    {
+      "code": "b2",
+      "hexUpper": "B2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Legacy Option ROM Initialization (GPU VBIOS / PCIe Card Stall)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b2"
+    },
+    {
+      "code": "b4",
+      "hexUpper": "B4",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "USB Hot Plug — Faulty or High-Draw USB Device Stalling POST",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b4"
+    },
+    {
+      "code": "b6",
+      "hexUpper": "B6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "Clean-up of NVRAM — Corrupted CMOS / BIOS Settings",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=b6"
+    },
+    {
+      "code": "C5",
+      "hexUpper": "C5",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug",
+        "AM5 DDR5"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "AM5 DDR5 Memory Training Failure / OEM Pre-Memory DRAM Fault",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-c5/"
+    },
+    {
+      "code": "d0",
+      "hexUpper": "D0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "SEC / CPU Init",
+      "severity": "critical",
+      "shortMeaning": "CPU Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d0"
+    },
+    {
+      "code": "d1",
+      "hexUpper": "D1",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "North Bridge / System Agent / IOD Initialization Error",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d1"
+    },
+    {
+      "code": "d3",
+      "hexUpper": "D3",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "Some Architectural Protocols Are Not Available (BIOS/NVRAM Fault)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d3"
+    },
+    {
+      "code": "d4",
+      "hexUpper": "D4",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "PCI Resource Allocation Error — Out of Resources",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d4"
+    },
+    {
+      "code": "d6",
+      "hexUpper": "D6",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "DXE / PCIe & Video",
+      "severity": "critical",
+      "shortMeaning": "No Console Output Devices Are Found (GPU / Monitor Handshake Missing)",
+      "referenceUrl": "https://biosarchives.com/post-codes/code-d6/"
+    },
+    {
+      "code": "d7",
+      "hexUpper": "D7",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "BDS / Boot & Storage",
+      "severity": "warning",
+      "shortMeaning": "No Console Input Devices Are Found (Keyboard / Mouse Missing)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=d7"
+    },
+    {
+      "code": "E0",
+      "hexUpper": "E0",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "warning",
+      "shortMeaning": "S3 Resume Is Started (Sleep Wake Stall)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=E0"
+    },
+    {
+      "code": "E1",
+      "hexUpper": "E1",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "OS Handoff",
+      "severity": "warning",
+      "shortMeaning": "S3 Boot Script Execution Failure",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=E1"
+    },
+    {
+      "code": "F2",
+      "hexUpper": "F2",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "Recovery / Fault",
+      "severity": "critical",
+      "shortMeaning": "Recovery Process Started (Corrupted BIOS / Memory Training Fallback)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=F2"
+    },
+    {
+      "code": "F9",
+      "hexUpper": "F9",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "Recovery / Fault",
+      "severity": "critical",
+      "shortMeaning": "Recovery Capsule Is Not Found (BIOS Recovery USB Required)",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=F9"
+    },
+    {
+      "code": "FE",
+      "hexUpper": "FE",
+      "vendors": [
+        "AMI",
+        "ASUS Q-Code",
+        "MSI",
+        "Gigabyte",
+        "ASRock Dr. Debug"
+      ],
+      "stage": "PEI / Memory Init",
+      "severity": "critical",
+      "shortMeaning": "Reserved AMI Error — Severe DRAM / IMC Initialization Failure",
+      "referenceUrl": "https://biosarchives.com/tools/post-code-lookup/?code=FE"
+    }
+  ]
+}

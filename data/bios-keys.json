@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "https://biosarchives.com/bios-keys/",
+  "license": "MIT",
+  "generatedForRelease": "2026-11-25",
+  "brands": [
+    {
+      "slug": "hp",
+      "name": "HP",
+      "biosKeys": [
+        "F10",
+        "ESC"
+      ],
+      "bootMenuKeys": [
+        "F9"
+      ],
+      "recoveryKeys": [
+        "Win + B",
+        "Win + V"
+      ],
+      "flashUtility": "HP BIOS Update Utility / HP PC Hardware Diagnostics UEFI",
+      "flashbackRenameRule": "Win + B recovery reads /Hewlett-Packard/BIOS/Current/*.bin created by HP SoftPaq",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp/"
+    },
+    {
+      "slug": "dell",
+      "name": "Dell",
+      "biosKeys": [
+        "F2"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Ctrl + Esc"
+      ],
+      "flashUtility": "Dell BIOS Flash Update (F12 Menu) / Dell SupportAssist",
+      "flashbackRenameRule": "FAT32 USB root BIOS_IMG.rcv (for Ctrl + Esc Dell BIOS Recovery)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell/"
+    },
+    {
+      "slug": "lenovo",
+      "name": "Lenovo",
+      "biosKeys": [
+        "F1",
+        "F2",
+        "NOVO"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "NOVO",
+        "Enter"
+      ],
+      "flashUtility": "Lenovo Vantage / Bootable CD-USB BIOS Utility / LVFS (fwupd)",
+      "flashbackRenameRule": "Official ThinkPad ISO/EXE updater or Self-Healing BIOS backup on modern models",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo/"
+    },
+    {
+      "slug": "asus",
+      "name": "ASUS",
+      "biosKeys": [
+        "F2",
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F8",
+        "ESC"
+      ],
+      "recoveryKeys": [
+        "BIOS FlashBack Button"
+      ],
+      "flashUtility": "ASUS EZ Flash 3 / USB BIOS FlashBack / MyASUS",
+      "flashbackRenameRule": "Run bundled BIOSRenamer.exe (e.g., RSB550FG.CAP) on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.asus.com/support/download-center/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/asus/"
+    },
+    {
+      "slug": "msi",
+      "name": "MSI",
+      "biosKeys": [
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F11"
+      ],
+      "recoveryKeys": [
+        "Flash BIOS Button"
+      ],
+      "flashUtility": "MSI M-Flash / Flash BIOS Button (CPU-less)",
+      "flashbackRenameRule": "Rename extracted BIOS file to exactly MSI.ROM on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.msi.com/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/msi/"
+    },
+    {
+      "slug": "gigabyte",
+      "name": "Gigabyte",
+      "biosKeys": [
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Q-Flash Plus Button"
+      ],
+      "flashUtility": "Gigabyte Q-Flash (F8 in BIOS) / Q-Flash Plus (CPU-less)",
+      "flashbackRenameRule": "Rename extracted BIOS file strictly to GIGABYTE.bin on FAT32 MBR USB root",
+      "officialSupportUrl": "https://www.gigabyte.com/Support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/gigabyte/"
+    },
+    {
+      "slug": "acer",
+      "name": "Acer",
+      "biosKeys": [
+        "F2",
+        "DEL"
+      ],
+      "bootMenuKeys": [
+        "F12"
+      ],
+      "recoveryKeys": [
+        "Alt + F10"
+      ],
+      "flashUtility": "InsydeH2O Windows BIOS Flasher / Crisis Recovery (Fn + Esc)",
+      "flashbackRenameRule": "InsydeH2O Crisis Recovery (Fn + Esc) uses model-specific .fd filename from official package",
+      "officialSupportUrl": "https://www.acer.com/us-en/support/drivers-and-manuals",
+      "referenceUrl": "https://biosarchives.com/bios-keys/acer/"
+    },
+    {
+      "slug": "chromebook",
+      "name": "Chromebook",
+      "biosKeys": [
+        "Esc + Refresh + Power"
+      ],
+      "bootMenuKeys": [
+        "Ctrl + L",
+        "Ctrl + U"
+      ],
+      "recoveryKeys": [
+        "Refresh + Power"
+      ],
+      "flashUtility": "ChromeOS Verified Automatic Firmware Update / Official Recovery Utility",
+      "flashbackRenameRule": "Managed via ChromeOS Recovery Utility USB (no manual rename; SPI WP hardware-protected)",
+      "officialSupportUrl": "https://support.google.com/chromebook/answer/1080595",
+      "referenceUrl": "https://biosarchives.com/bios-keys/chromebook/"
+    }
+  ],
+  "models": [
+    {
+      "slug": "hp-pavilion-15",
+      "brand": "HP",
+      "model": "HP Pavilion 15",
+      "category": "Laptop",
+      "platform": "Intel Core 10th–13th Gen / AMD Ryzen 5000–7000U (InsydeH2O UEFI)",
+      "biosKey": "F10 (or Esc -> F10)",
+      "bootMenuKey": "F9",
+      "biosFlashMethod": "HP SoftPaq Windows Installer / USB Crisis Recovery (Win + B)",
+      "flashbackRenameFile": "Prepared automatically inside /Hewlett-Packard/BIOS/Current/ by HP SoftPaq USB wizard",
+      "cmosBattery": "Uses main internal Li-Ion pack on 2020+ revisions (older 15-cs/cw models use CR2032 holder)",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers/laptops",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp-pavilion-15/"
+    },
+    {
+      "slug": "hp-elitebook-840",
+      "brand": "HP",
+      "model": "HP EliteBook 840 (G3–G11)",
+      "category": "Laptop",
+      "platform": "Intel Core 6th–14th Gen / Core Ultra (Commercial HP Sure Start UEFI)",
+      "biosKey": "F10",
+      "bootMenuKey": "F9",
+      "biosFlashMethod": "F10 Native Network BIOS Update / HP Image Assistant / FAT32 USB",
+      "flashbackRenameFile": "/Hewlett-Packard/BIOS/New/<board-id>.bin generated by official HP SoftPaq",
+      "cmosBattery": "CR2032 wired CMOS cell on G3–G6; main battery RTC on G7–G11",
+      "officialSupportUrl": "https://support.hp.com/us-en/drivers/laptops",
+      "referenceUrl": "https://biosarchives.com/bios-keys/hp-elitebook-840/"
+    },
+    {
+      "slug": "dell-optiplex-7050",
+      "brand": "Dell",
+      "model": "Dell OptiPlex 7050",
+      "category": "Desktop",
+      "platform": "Intel Q270 Chipset / LGA1151 6th & 7th Gen Core (Tower, SFF, Micro)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 One-Time Boot Menu -> BIOS Flash Update (FAT32 USB) or Official Windows EXE",
+      "flashbackRenameFile": "Place official OptiPlex_7050_*.exe directly on FAT32 USB root (no rename for F12 Flash)",
+      "cmosBattery": "Standard CR2032 3V Lithium Coin Cell (clipped flat holder on system board)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us/product-support/product/optiplex-7050-desktop/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-optiplex-7050/"
+    },
+    {
+      "slug": "dell-latitude-5420",
+      "brand": "Dell",
+      "model": "Dell Latitude 5420",
+      "category": "Laptop",
+      "platform": "Intel 11th Gen Tiger Lake (vPro / non-vPro Enterprise UEFI)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 -> BIOS Flash Update (FAT32 USB) / Dell Command Update / LVFS fwupd",
+      "flashbackRenameFile": "BIOS_IMG.rcv on FAT32 USB root for Ctrl + Esc Recovery (or raw official .exe for F12 Flash)",
+      "cmosBattery": "Wired CR2032 coin cell (2-pin micro connector on bottom right of board) plus main battery RTC backup",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us/product-support/product/latitude-14-5420-laptop/drivers",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-latitude-5420/"
+    },
+    {
+      "slug": "dell-xps-15",
+      "brand": "Dell",
+      "model": "Dell XPS 15 (9500 / 9510 / 9520 / 9530)",
+      "category": "Laptop",
+      "platform": "Intel Core 10th–13th Gen H-Series (XPS 9500 / 9510 / 9520 / 9530)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "F12 -> BIOS Flash Update (FAT32 USB-C) / Windows Update Capsule / Dell Update",
+      "flashbackRenameFile": "BIOS_IMG.rcv on FAT32 USB root for Ctrl + Esc Recovery",
+      "cmosBattery": "Main Li-Ion battery provides RTC power on 9500–9530 (no separate CR2032 coin cell)",
+      "officialSupportUrl": "https://www.dell.com/support/home/en-us",
+      "referenceUrl": "https://biosarchives.com/bios-keys/dell-xps-15/"
+    },
+    {
+      "slug": "lenovo-thinkpad-t480",
+      "brand": "Lenovo",
+      "model": "Lenovo ThinkPad T480",
+      "category": "Laptop",
+      "platform": "Intel 8th Gen Kaby Lake-R (Type 20L5 / 20L6 Commercial UEFI)",
+      "biosKey": "F1 (or Enter -> F1)",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "Lenovo Vantage / Bootable USB ISO / Linux fwupdmgr (LVFS)",
+      "flashbackRenameFile": "Official Lenovo Bootable ISO (el-torito -> USB via geteltorito) or Windows BIOS Utility",
+      "cmosBattery": "2-pin yellow-wrapped CR2032/CR2025 wired CMOS battery under bottom cover",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t480-type-20l5-20l6/downloads",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo-thinkpad-t480/"
+    },
+    {
+      "slug": "lenovo-ideapad-3",
+      "brand": "Lenovo",
+      "model": "Lenovo IdeaPad 3",
+      "category": "Laptop",
+      "platform": "Intel 10th–13th Gen / AMD Ryzen 3000–7000U (Insyde / AMI Consumer UEFI)",
+      "biosKey": "F2 (or Fn + F2) / Novo Button",
+      "bootMenuKey": "F12 (or Fn + F12)",
+      "biosFlashMethod": "Official Lenovo Windows BIOS Updater EXE (verify exact 10-char MTM / model like 15ADA05 or 15ITL6)",
+      "flashbackRenameFile": "Self-contained Lenovo Windows updater; Crisis recovery uses model-specific .fd via Fn + R",
+      "cmosBattery": "Main internal battery RTC on most Slim 3 / 15ITL6 / 15ALC6 revisions; wired CR2032 on older 15IIL05/15ADA05",
+      "officialSupportUrl": "https://pcsupport.lenovo.com/us/en/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/lenovo-ideapad-3/"
+    },
+    {
+      "slug": "asus-rog-strix-b550-f",
+      "brand": "ASUS",
+      "model": "ASUS ROG STRIX B550-F GAMING",
+      "category": "Motherboard",
+      "platform": "AMD AM4 Socket / AMD B550 Chipset (DDR4, PCIe 4.0)",
+      "biosKey": "Del or F2",
+      "bootMenuKey": "F8",
+      "biosFlashMethod": "ASUS EZ Flash 3 / CPU-less USB BIOS FlashBack",
+      "flashbackRenameFile": "RSB550FG.CAP (non-WiFi) / RSB550FGW.CAP (Wi-Fi) / RSB550FW2.CAP (Wi-Fi II)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (located beneath primary PCIe x16 GPU slot)",
+      "officialSupportUrl": "https://rog.asus.com/motherboards/rog-strix/rog-strix-b550-f-gaming-model/helpdesk_bios/",
+      "referenceUrl": "https://biosarchives.com/bios-keys/asus-rog-strix-b550-f/"
+    },
+    {
+      "slug": "msi-b550-tomahawk",
+      "brand": "MSI",
+      "model": "MSI MAG B550 TOMAHAWK",
+      "category": "Motherboard",
+      "platform": "AMD AM4 Socket / AMD B550 Chipset (DDR4, Dual LAN)",
+      "biosKey": "Del",
+      "bootMenuKey": "F11",
+      "biosFlashMethod": "MSI M-Flash / Rear I/O Flash BIOS Button (MSI.ROM)",
+      "flashbackRenameFile": "MSI.ROM (exact uppercase name on root of FAT32 MBR USB 2.0 drive)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (between PCI_E1 and PCI_E3 slots)",
+      "officialSupportUrl": "https://www.msi.com/Motherboard/MAG-B550-TOMAHAWK/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/msi-b550-tomahawk/"
+    },
+    {
+      "slug": "gigabyte-b650-aorus-elite",
+      "brand": "Gigabyte",
+      "model": "Gigabyte B650 AORUS ELITE AX",
+      "category": "Motherboard",
+      "platform": "AMD AM5 Socket / AMD B650 Chipset (DDR5, Ryzen 7000 & 9000 Series)",
+      "biosKey": "Del",
+      "bootMenuKey": "F12",
+      "biosFlashMethod": "Q-Flash (F8 in BIOS) / CPU-less Q-Flash Plus (GIGABYTE.bin)",
+      "flashbackRenameFile": "GIGABYTE.bin (exact capitalization on FAT32 MBR USB root)",
+      "cmosBattery": "CR2032 3V Lithium Coin Cell (near lower PCIe slots)",
+      "officialSupportUrl": "https://www.gigabyte.com/Motherboard/B650-AORUS-ELITE-AX-rev-10-11/support",
+      "referenceUrl": "https://biosarchives.com/bios-keys/gigabyte-b650-aorus-elite/"
+    },
+    {
+      "slug": "acer-nitro-5",
+      "brand": "Acer",
+      "model": "Acer Nitro 5",
+      "category": "Laptop",
+      "platform": "Intel 10th–13th Gen / AMD Ryzen 5000–7000H (AN515-55/57/58, AN515-45/46)",
+      "biosKey": "F2",
+      "bootMenuKey": "F12 (must enable in BIOS Main tab first)",
+      "biosFlashMethod": "Official Acer InsydeH2O Windows BIOS EXE (match exact AN515-xx SKU!)",
+      "flashbackRenameFile": "Self-contained official Acer EXE; Insyde Crisis requires extracted .fd file on FAT32 USB",
+      "cmosBattery": "2-pin wired CR2032 coin battery on AN515-55/57; main battery RTC on newer AN515-58/Nitro V",
+      "officialSupportUrl": "https://www.acer.com/us-en/support/drivers-and-manuals",
+      "referenceUrl": "https://biosarchives.com/bios-keys/acer-nitro-5/"
+    }
+  ]
+}

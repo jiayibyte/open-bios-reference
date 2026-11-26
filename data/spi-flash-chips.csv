@@ -1,0 +1,30 @@
+part_number,manufacturer,capacity_mbit,capacity_mb,voltage_nominal,voltage_range,is_18v_hazard,jedec_id,packages,compatible_parts,reference_url
+W25Q16JV,Winbond,16,2,3.3V,2.7V–3.6V,false,EF 40 15,SOIC-8 (150mil); SOIC-8 (208mil); WSON-8 (6x5mm),MX25L1606E; GD25Q16C,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q16JV
+W25Q32FV,Winbond,32,4,3.3V,2.7V–3.6V,false,EF 40 16,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q32JV; MX25L3206E,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32FV
+W25Q32JV,Winbond,32,4,3.3V,2.7V–3.6V,false,EF 40 16,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q32FV; MX25L3206E,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32JV
+W25Q32FW,Winbond,32,4,1.8V,1.65V–1.95V,true,EF 60 16,SOIC-8 (208mil); WSON-8 (6x5mm),,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q32FW
+W25Q64FV,Winbond,64,8,3.3V,2.7V–3.6V,false,EF 40 17,SOIC-8 (208mil); WSON-8 (6x5mm); SOIC-16 (300mil),W25Q64JV; MX25L6406E; MX25L6473F; GD25Q64C; N25Q064A; XM25QH64A,https://biosarchives.com/chips/w25q64fv/
+W25Q64JV,Winbond,64,8,3.3V,2.7V–3.6V,false,EF 40 17,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FV; MX25L6406E; MX25L6473F; GD25Q64C; N25Q064A; XM25QH64A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q64JV
+W25Q64FW,Winbond,64,8,1.8V,1.65V–1.95V,true,EF 60 17,SOIC-8 (208mil); WSON-8 (6x5mm),MX25U6435F; GD25LQ64C,https://biosarchives.com/chips/w25q64fw/
+W25Q128FV,Winbond,128,16,3.3V,2.7V–3.6V,false,EF 40 18,SOIC-8 (208mil); WSON-8 (6x5mm); SOIC-16 (300mil),W25Q128JV; MX25L12873F; GD25B127D; GD25Q127C; MT25QL128ABA; IS25LP128F; XM25QH128A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q128FV
+W25Q128JV,Winbond,128,16,3.3V,2.7V–3.6V,false,EF 40 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FV; MX25L12873F; GD25B127D; GD25Q127C; MT25QL128ABA; IS25LP128F; XM25QH128A,https://biosarchives.com/chips/w25q128jv/
+W25Q128FW,Winbond,128,16,1.8V,1.65V–1.95V,true,EF 60 18,SOIC-8 (208mil); WSON-8 (6x5mm),MX25U12873F; GD25LQ128D,https://biosarchives.com/chips/w25q128fw/
+W25Q256JV,Winbond,256,32,3.3V,2.7V–3.6V,false,EF 40 19,SOIC-16 (300mil); WSON-8 (8x6mm); SOIC-8 (208mil),MX25L25673G,https://biosarchives.com/chips/w25q256jv/
+W25Q256JW,Winbond,256,32,1.8V,1.7V–1.95V,true,EF 60 19,WSON-8 (8x6mm); SOIC-16 (300mil); SOIC-8 (208mil),,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=W25Q256JW
+MX25L3206E,Macronix,32,4,3.3V,2.7V–3.6V,false,C2 20 16,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q32FV; W25Q32JV,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L3206E
+MX25L6406E,Macronix,64,8,3.3V,2.7V–3.6V,false,C2 20 17,SOIC-8 (208mil); SOIC-16 (300mil); WSON-8 (6x5mm),W25Q64FV; W25Q64JV; MX25L6473F; GD25Q64C; N25Q064A; XM25QH64A,https://biosarchives.com/chips/mx25l6406e/
+MX25L6473F,Macronix,64,8,3.3V,2.7V–3.6V,false,C2 20 17,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FV; W25Q64JV; MX25L6406E; GD25Q64C; N25Q064A; XM25QH64A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L6473F
+MX25L12873F,Macronix,128,16,3.3V,2.7V–3.6V,false,C2 20 18,SOIC-8 (208mil); WSON-8 (6x5mm); SOIC-16 (300mil),W25Q128FV; W25Q128JV; GD25B127D; GD25Q127C; MT25QL128ABA; IS25LP128F; XM25QH128A,https://biosarchives.com/chips/mx25l12873f/
+MX25L25673G,Macronix,256,32,3.3V,2.7V–3.6V,false,C2 20 19,SOIC-16 (300mil); WSON-8 (8x6mm); SOIC-8 (208mil),W25Q256JV,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25L25673G
+MX25U6435F,Macronix,64,8,1.8V,1.65V–2.0V,true,C2 25 37,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FW; GD25LQ64C,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25U6435F
+MX25U12873F,Macronix,128,16,1.8V,1.65V–2.0V,true,C2 25 38,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FW; GD25LQ128D,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MX25U12873F
+GD25Q64C,GigaDevice,64,8,3.3V,2.7V–3.6V,false,C8 40 17,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FV; W25Q64JV; MX25L6406E; MX25L6473F; N25Q064A; XM25QH64A,https://biosarchives.com/chips/gd25q64c/
+GD25Q127C,GigaDevice,128,16,3.3V,2.7V–3.6V,false,C8 40 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FV; W25Q128JV; MX25L12873F; GD25B127D; MT25QL128ABA; IS25LP128F; XM25QH128A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25Q127C
+GD25B127D,GigaDevice,128,16,3.3V,2.7V–3.6V,false,C8 40 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FV; W25Q128JV; MX25L12873F; GD25Q127C; MT25QL128ABA; IS25LP128F; XM25QH128A,https://biosarchives.com/chips/gd25b127d/
+GD25LQ64C,GigaDevice,64,8,1.8V,1.65V–2.0V,true,C8 60 17,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FW; MX25U6435F,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25LQ64C
+GD25LQ128D,GigaDevice,128,16,1.8V,1.65V–2.0V,true,C8 60 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FW; MX25U12873F,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=GD25LQ128D
+N25Q064A,Micron,64,8,3.3V,2.7V–3.6V,false,20 BA 17,SOIC-8 (208mil); V-PDFN-8 (6x5mm),W25Q64FV; W25Q64JV; MX25L6406E; MX25L6473F; GD25Q64C; XM25QH64A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=N25Q064A
+MT25QL128ABA,Micron,128,16,3.3V,2.7V–3.6V,false,20 BA 18,SOIC-8 (208mil); W-PDFN-8 (6x5mm),W25Q128FV; W25Q128JV; MX25L12873F; GD25B127D; GD25Q127C; IS25LP128F; XM25QH128A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=MT25QL128ABA
+IS25LP128F,ISSI,128,16,3.3V,2.3V–3.6V,false,9D 60 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FV; W25Q128JV; MX25L12873F; GD25B127D; GD25Q127C; MT25QL128ABA; XM25QH128A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=IS25LP128F
+XM25QH64A,XMC,64,8,3.3V,2.7V–3.6V,false,20 70 17,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q64FV; W25Q64JV; MX25L6406E; MX25L6473F; GD25Q64C; N25Q064A,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=XM25QH64A
+XM25QH128A,XMC,128,16,3.3V,2.7V–3.6V,false,20 70 18,SOIC-8 (208mil); WSON-8 (6x5mm),W25Q128FV; W25Q128JV; MX25L12873F; GD25B127D; GD25Q127C; MT25QL128ABA; IS25LP128F,https://biosarchives.com/tools/spi-flash-chip-lookup/?chip=XM25QH128A

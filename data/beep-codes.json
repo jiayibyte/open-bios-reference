@@ -1,0 +1,432 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "https://biosarchives.com/tools/beep-code-decoder/",
+  "license": "MIT",
+  "generatedForRelease": "2026-11-25",
+  "count": 47,
+  "beepAndLedCodes": [
+    {
+      "id": "ami-1-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Short Beep",
+      "shortCode": "1S",
+      "subsystem": "RAM / Memory",
+      "severity": "medium",
+      "summary": "Normal POST pass on modern AMI UEFI (or DRAM refresh failure if screen stays permanently black)."
+    },
+    {
+      "id": "ami-2-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "2 Short Beeps",
+      "shortCode": "2S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Memory parity / early DRAM detection failure during PEI."
+    },
+    {
+      "id": "ami-3-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "3 Short Beeps",
+      "shortCode": "3S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Base 64KB memory read/write test failure (classic AMI RAM fault)."
+    },
+    {
+      "id": "ami-4-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "4 Short Beeps",
+      "shortCode": "4S",
+      "subsystem": "System Board / EC",
+      "severity": "high",
+      "summary": "System timer (RTC / programmable interval timer) failure or severe memory error."
+    },
+    {
+      "id": "ami-5-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "5 Short Beeps",
+      "shortCode": "5S",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "Processor error (or on Gigabyte/ASRock UEFI, missing console/GPU output when no iGPU is present)."
+    },
+    {
+      "id": "ami-6-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "6 Short Beeps",
+      "shortCode": "6S",
+      "subsystem": "System Board / EC",
+      "severity": "high",
+      "summary": "Gate A20 / Super I/O keyboard controller failure."
+    },
+    {
+      "id": "ami-1-long-2-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Video / Graphics initialization error (no PCIe GPU or failed DisplayPort handshake)."
+    },
+    {
+      "id": "ami-1-long-3-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 3 Short Beeps",
+      "shortCode": "1L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "ASUS/AMI UEFI no-VGA detected (or extended memory test failure on legacy AMI)."
+    },
+    {
+      "id": "ami-1-long-4-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "1 Long, 4 Short Beeps",
+      "shortCode": "1L-4S",
+      "subsystem": "CPU / VRM",
+      "severity": "high",
+      "summary": "Hardware component failure — commonly CPU fan missing, over-temperature, or VRM fault on ASUS AMI UEFI."
+    },
+    {
+      "id": "ami-8-short",
+      "systemId": "ami-uefi",
+      "patternLabel": "8 Short Beeps",
+      "shortCode": "8S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Display memory (VRAM) read/write error on discrete graphics card."
+    },
+    {
+      "id": "award-1-long-2-short",
+      "systemId": "award",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Award BIOS video adapter initialization failure."
+    },
+    {
+      "id": "award-continuous-long",
+      "systemId": "award",
+      "patternLabel": "Repeating Long Beeps (Endless)",
+      "shortCode": "LOOP-L",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Award BIOS DRAM not detected or improperly seated."
+    },
+    {
+      "id": "award-high-low-siren",
+      "systemId": "award",
+      "patternLabel": "High-Low Repeating Siren",
+      "shortCode": "SIREN",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "CPU overheating, dead CPU fan, or VRM out-of-spec voltage alarm."
+    },
+    {
+      "id": "award-1-long-3-short",
+      "systemId": "award",
+      "patternLabel": "1 Long, 3 Short Beeps",
+      "shortCode": "1L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "No video card detected or faulty GPU RAM on Award BIOS."
+    },
+    {
+      "id": "phoenix-1-3-3-1",
+      "systemId": "phoenix",
+      "patternLabel": "1-3-3-1 Beep Sequence",
+      "shortCode": "1-3-3-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "AUTOSIZE DRAM failure — memory missing, unseated, or unsupported."
+    },
+    {
+      "id": "phoenix-1-2-2-3",
+      "systemId": "phoenix",
+      "patternLabel": "1-2-2-3 Beep Sequence",
+      "shortCode": "1-2-2-3",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "BIOS ROM checksum error — corrupted SPI flash firmware."
+    },
+    {
+      "id": "phoenix-1-3-1-1",
+      "systemId": "phoenix",
+      "patternLabel": "1-3-1-1 Beep Sequence",
+      "shortCode": "1-3-1-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "DRAM refresh test failure."
+    },
+    {
+      "id": "phoenix-3-3-4",
+      "systemId": "phoenix",
+      "patternLabel": "3-3-4 (or 1-3-4-3) Sequence",
+      "shortCode": "3-3-4",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Video memory initialization failure."
+    },
+    {
+      "id": "hp-2-2",
+      "systemId": "hp-caps-led",
+      "patternLabel": "2 Long, 2 Short Blinks (2.2)",
+      "shortCode": "2L-2S",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "HP Main BIOS area corrupted (checksum failure)."
+    },
+    {
+      "id": "hp-3-2",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 2 Short Blinks (3.2)",
+      "shortCode": "3L-2S",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "HP Embedded Controller timed out waiting for BIOS memory initialization (RAM fault)."
+    },
+    {
+      "id": "hp-3-3",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 3 Short Blinks (3.3)",
+      "shortCode": "3L-3S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "HP graphics controller initialization timeout."
+    },
+    {
+      "id": "hp-3-4",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 4 Short Blinks (3.4)",
+      "shortCode": "3L-4S",
+      "subsystem": "Power Rail",
+      "severity": "critical",
+      "summary": "HP Embedded Controller timed out waiting for power rail good (Power Good / VRM fault)."
+    },
+    {
+      "id": "hp-3-5",
+      "systemId": "hp-caps-led",
+      "patternLabel": "3 Long, 5 Short Blinks (3.5)",
+      "shortCode": "3L-5S",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "HP CPU not detected or failed core initialization."
+    },
+    {
+      "id": "hp-5-3",
+      "systemId": "hp-caps-led",
+      "patternLabel": "5 Long, 3 Short Blinks (5.3)",
+      "shortCode": "5L-3S",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "HP Embedded Controller cannot reach BIOS within timeout (Board / SPI / EC communication fault)."
+    },
+    {
+      "id": "hp-2-4",
+      "systemId": "hp-caps-led",
+      "patternLabel": "2 Long, 4 Short Blinks (2.4)",
+      "shortCode": "2L-4S",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "high",
+      "summary": "HP BIOS recovery in progress or attempting secondary rollback image."
+    },
+    {
+      "id": "dell-2-1",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 1 White",
+      "shortCode": "2A-1W",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "Dell CPU failure (Processor initialization fault)."
+    },
+    {
+      "id": "dell-2-2",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 2 White",
+      "shortCode": "2A-2W",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "critical",
+      "summary": "Dell System Board: BIOS or ROM checksum failure."
+    },
+    {
+      "id": "dell-2-3",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 3 White",
+      "shortCode": "2A-3W",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Dell No Memory / RAM detected."
+    },
+    {
+      "id": "dell-2-4",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 4 White",
+      "shortCode": "2A-4W",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Dell Memory / RAM failure (detected but failed training/test)."
+    },
+    {
+      "id": "dell-2-7",
+      "systemId": "dell-led",
+      "patternLabel": "2 Amber, 7 White",
+      "shortCode": "2A-7W",
+      "subsystem": "GPU / Display",
+      "severity": "medium",
+      "summary": "Dell LCD failure (internal eDP screen cable or panel fault; RAM on older OptiPlex)."
+    },
+    {
+      "id": "dell-3-1",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 1 White",
+      "shortCode": "3A-1W",
+      "subsystem": "CMOS / Battery",
+      "severity": "medium",
+      "summary": "Dell CMOS coin-cell battery failure."
+    },
+    {
+      "id": "dell-3-2",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 2 White",
+      "shortCode": "3A-2W",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "Dell PCI / Video card or chip failure."
+    },
+    {
+      "id": "dell-3-3",
+      "systemId": "dell-led",
+      "patternLabel": "3 Amber, 3 White (or 3A-4W)",
+      "shortCode": "3A-3W",
+      "subsystem": "BIOS / SPI ROM",
+      "severity": "high",
+      "summary": "Dell BIOS Recovery image not found (3A-3W) or recovery image invalid (3A-4W)."
+    },
+    {
+      "id": "tp-1-3-3-1",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "1-3-3-1 Short Beeps",
+      "shortCode": "1-3-3-1",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Classic ThinkPad DIMM / memory not detected or incompatible."
+    },
+    {
+      "id": "tp-1-long-2-short",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "1 Long, 2 Short Beeps",
+      "shortCode": "1L-2S",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "ThinkPad video / display initialization fault (or system board)."
+    },
+    {
+      "id": "tp-4x4-short",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "4 Cycles of 4 Short Beeps (4-4-4-4)",
+      "shortCode": "4-4-4-4",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "ThinkPad Security Chip (TPM / TCG) communication failure."
+    },
+    {
+      "id": "tp-5-short-twice",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "5 Short Beeps (Repeated Twice)",
+      "shortCode": "5S-5S",
+      "subsystem": "System Board / EC",
+      "severity": "critical",
+      "summary": "ThinkPad system board / security hardware fault."
+    },
+    {
+      "id": "tp-musical-tone",
+      "systemId": "lenovo-thinkpad",
+      "patternLabel": "Harmonic Musical Melody (Modern ThinkPads)",
+      "shortCode": "TONE",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "Modern ThinkPads (T480/T14/X1 Carbon) encode 4-digit hex errors into a short musical tone."
+    },
+    {
+      "id": "asus-qled-orange",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Yellow-Orange LED (DRAM)",
+      "shortCode": "DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "ASUS Q-LED halted at DRAM detection or DDR5 memory training."
+    },
+    {
+      "id": "asus-qled-red",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Red LED (CPU)",
+      "shortCode": "CPU",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "ASUS Q-LED halted at CPU initialization."
+    },
+    {
+      "id": "asus-qled-white",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid White LED (VGA)",
+      "shortCode": "VGA",
+      "subsystem": "GPU / Display",
+      "severity": "medium",
+      "summary": "ASUS Q-LED halted at GPU / display output handshake."
+    },
+    {
+      "id": "asus-qled-green",
+      "systemId": "asus-q-led",
+      "patternLabel": "Solid Yellow-Green LED (BOOT)",
+      "shortCode": "BOOT",
+      "subsystem": "Boot Drive",
+      "severity": "medium",
+      "summary": "ASUS Q-LED passed CPU/RAM/GPU and stopped because no bootable OS drive was found (or you are in BIOS)."
+    },
+    {
+      "id": "msi-ez-cpu",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Red LED — CPU",
+      "shortCode": "CPU",
+      "subsystem": "CPU / VRM",
+      "severity": "critical",
+      "summary": "MSI EZ Debug LED: CPU not detected or failed initialization."
+    },
+    {
+      "id": "msi-ez-dram",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Yellow/White LED — DRAM",
+      "shortCode": "DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "high",
+      "summary": "MSI EZ Debug LED: RAM not detected or failed training."
+    },
+    {
+      "id": "msi-ez-cpu-dram",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Red CPU + Yellow DRAM Together (AM5)",
+      "shortCode": "CPU+DRAM",
+      "subsystem": "RAM / Memory",
+      "severity": "medium",
+      "summary": "Normal MSI AM5 DDR5 first-boot memory training state (fault only if stuck > 4 minutes)."
+    },
+    {
+      "id": "msi-ez-vga",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid White LED — VGA",
+      "shortCode": "VGA",
+      "subsystem": "GPU / Display",
+      "severity": "high",
+      "summary": "MSI EZ Debug LED: Graphics card not detected or failed init."
+    },
+    {
+      "id": "msi-ez-boot",
+      "systemId": "msi-ez-debug",
+      "patternLabel": "Solid Green/White LED — BOOT",
+      "shortCode": "BOOT",
+      "subsystem": "Boot Drive",
+      "severity": "medium",
+      "summary": "MSI EZ Debug LED: Booting device not detected or failed (CPU/RAM/GPU all passed!)."
+    }
+  ]
+}
